@@ -1,16 +1,16 @@
 import { Operation } from "./Operation";
 
 export class MultiplyOperation extends Operation {
-  private readonly a: number;
-  private readonly b: number;
+  private readonly a: Operation;
+  private readonly b: Operation;
 
-  constructor(a: number, b: number) {
+  constructor(a: Operation, b: Operation) {
     super();
     this.a = a;
     this.b = b;
   }
 
   public operate(): number {
-    return this.a * this.b;
+    return this.a.operate() * this.b.operate();
   }
 }
