@@ -14,9 +14,9 @@ describe('Calculator', () => {
     });
   })
 
-  describe(".product", () => {
-    it('should properly product 10 * 10 = 100', () => {
-      expect(new Calculator().product(10, 10)).eq(100);
+  describe(".multiple", () => {
+    it('should properly multiple 10 * 10 = 100', () => {
+      expect(new Calculator().multiply(10, 10)).eq(100);
     });
   })
 
