@@ -1,8 +1,11 @@
+import assert from "assert";
 import { CompositeOperation } from "./CompositeOperation";
 
 export class DivideOperation extends CompositeOperation {
 
   public operate(): number {
-    return this.a.operate() / this.b.operate();
+    assert(this.leftOperation);
+    assert(this.rightOperation);
+    return this.leftOperation.operate() / this.rightOperation.operate();
   }
 }
